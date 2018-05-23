@@ -1,22 +1,23 @@
 {
-  "name": "vue-cookie-law",
-  "version": "1.6.0",
+  "name": "vue-bootstrap-cookie-law",
+  "version": "2.0.0",
   "description": "🍪 👮 EU Cookie Law Plugin for Vue.js",
-  "author": "Jakub Juszczak <jakub@posteo.de>",
+  "author": "Leonard Marschke <leonard@marschke.me>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:apertureless/vue-cookie-law.git"
+    "url": "git+ssh://git@github.com:lmm-git/vue-bootstrap-cookie-law.git"
   },
   "bugs": {
-    "url": "https://github.com/apertureless/vue-cookie-law/issues"
+    "url": "https://github.com/lmm-git/vue-bootstrap-cookie-law/issues"
   },
   "keywords": [
     "Vuejs",
     "Vue",
     "Cookie",
     "EU law",
-    "Cookie info"
+    "Cookie info",
+    "Bootstrap"
   ],
   "main": "dist/vue-cookie-law.js",
   "unpkg": "dist/vue-cookie-law.js",
