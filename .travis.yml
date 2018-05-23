@@ -9,8 +9,14 @@ notifications:
 cache:
   directories:
   - "$HOME/.npm"
+after_success:
+  - npm run build
+before_deploy:
+  - cd dist
+  - cp ../package.json .
 deploy:
   provider: npm
+  skip_cleanup: true
   email: leonard@marschke.me
   on:
     tags: true
