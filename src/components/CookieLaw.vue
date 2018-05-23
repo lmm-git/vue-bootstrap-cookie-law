@@ -1,14 +1,13 @@
 <template>
   <transition appear :name="transitionName">
-    <div class="Cookie" :class="[containerPosition, cookieTheme]" v-if="isOpen">
-      <div class="Cookie__content">
-        <slot name="message">{{ message }}</slot>
+    <div class="cookie" :class="[containerPosition, cookieTheme]" v-if="isOpen">
+      <div class="cookie-content">
+        <slot name="message"><p>{{ message }}</p></slot>
       </div>
-      <div class="Cookie__buttons">
-        <a :target="target" :href="buttonLink" v-if="externalButtonLink" :class="buttonClass">{{ buttonLinkText }}</a>
-        <router-link :to="buttonLink" v-if="internalButtonLink" :class="buttonClass">{{ buttonLinkText }}</router-link>
-        <div :class="buttonClass" @click="accept">{{ buttonText }}</div>
-      </div>
+      <b-button-group class="cookie-buttons">
+        <b-button v-if="informationButtonLink" :variant="informationButtonVariant" :to="informationButtonLink">{{ informationButtonText }}</b-button>
+        <b-button :variant="closeButtonVariant" @click="accept">{{ buttonText }}</b-button>
+      </b-button-group>
     </div>
   </transition>
 </template>
@@ -21,17 +20,13 @@
         type: String,
         default: 'Got it!'
       },
-      buttonLink: {
+      informationButtonLink: {
         type: [String, Object],
         required: false
       },
-      buttonLinkText: {
+      informationButtonText: {
         type: String,
         default: 'More info'
-      },
-      buttonLinkNewTab: {
-        type: Boolean,
-        default: false
       },
       message: {
         type: String,
@@ -61,9 +56,13 @@
         type: String,
         default: 'slideFromBottom'
       },
-      buttonClass: {
+      closeButtonVariant: {
         type: String,
-        default: 'Cookie__button'
+        default: 'primary'
+      },
+      informationButtonVariant: {
+        type: String,
+        default: 'outline-primary'
       }
     },
     data () {
@@ -74,10 +73,10 @@
     },
     computed: {
       containerPosition () {
-        return `Cookie--${this.position}`
+        return `cookie-${this.position}`
       },
       cookieTheme () {
-        return `Cookie--${this.theme}`
+        return `cookie-${this.theme}`
       },
       externalButtonLink () {
         return typeof this.buttonLink === 'string' && this.buttonLink.length
@@ -132,89 +131,57 @@
 <style lang="scss">
   @import "~@nextindex/next-scss/next-scss.scss";
 
-  .Cookie {
+  .cookie {
     position: fixed;
     overflow: hidden;
     box-sizing: border-box;
     z-index: 9999;
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: baseline;
     flex-direction: column;
 
-    > * {
-      margin: rem(15) 0;
-      align-self: center;
-    }
-
     @include media($sm-up) {
       flex-flow: row;
+      display: flex;
+    }
 
-      > * {
-        margin: 0;
+    @include media($sm-down) {
+      text-align: center;
+
+      .btn-group {
+        display: inline-flex;
       }
     }
+
+    padding: 8px 15px 8px 15px;
   }
 
-  .Cookie--top {
+  .cookie-top {
     top: 0;
     left: 0;
     right: 0;
   }
 
-  .Cookie--bottom {
+  .cookie-bottom {
     bottom: 0;
     left: 0;
     right: 0;
   }
-  .Cookie__buttons {
+  .cookie-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     > * {
       margin: rem(5) 0;
     }
+  }
 
-    @include media($sm-up) {
-      flex-direction: row;
-      > * {
-        margin: 0 rem(15);
-      }
+  .cookie-content {
+    p {
+      margin: 0;
     }
   }
-  .Cookie__button {
-    cursor: pointer;
-    align-self: center;
-  }
-
-  @mixin generateTheme($theme, $backgroundColor, $fontColor, $buttonBackgroundColor, $buttonFontColor: #fff, $buttonRadius: 0) {
-    .Cookie--#{$theme} {
-      background: $backgroundColor;
-      color: $fontColor;
-      padding: 1.250em;
-
-        .Cookie__button {
-          background: $buttonBackgroundColor;
-          padding: 0.625em 3.125em;
-          color: $buttonFontColor;
-          border-radius: $buttonRadius;
-
-          &:hover {
-            background: darken($buttonBackgroundColor, 10%);
-          }
-      }
-    }
-  }
-
-  @include generateTheme('base', #F1F1F1, #232323, #97D058);
-  @include generateTheme('base--rounded', #F1F1F1, #232323, #97D058, #fff, 20px);
-  @include generateTheme('blood-orange', #424851, #fff, #E76A68);
-  @include generateTheme('blood-orange--rounded', #424851, #fff, #E76A68, #fff, 20px);
-  @include generateTheme('dark-lime', #424851, #fff, #97D058);
-  @include generateTheme('dark-lime--rounded', #424851, #fff, #97D058, #fff, 20px);
-  @include generateTheme('royal', #FBC227, #232323, #726CEA, #fff);
-  @include generateTheme('royal--rounded', #FBC227, #232323, #726CEA, #fff, 20px);
 
   .slideFromTop-enter, .slideFromTop-leave-to {
     transform: translate(0px, -12.500em);
@@ -245,4 +212,15 @@
   .fade-enter, .fade-leave-to {
     opacity: 0
   }
+
+
+  @mixin generateTheme($theme, $backgroundColor, $opacity: 1) {
+    .cookie-#{$theme} {
+      background: $backgroundColor;
+      opacity: $opacity;
+    }
+  }
+
+  @include generateTheme('base', #F1F1F1);
+  @include generateTheme('gray-transparent', #F1F1F1, 0.85);
 </style>

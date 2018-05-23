@@ -121,6 +121,7 @@
     "not ie <= 8"
   ],
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.11",
     "tiny-cookie": "^2.1.1"
   }
 }
