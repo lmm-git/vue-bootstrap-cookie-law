@@ -1,15 +1,13 @@
 # 🍪 👮 Vue Cookie Law
-[![Build Status](https://travis-ci.org/apertureless/vue-cookie-law.svg?branch=develop)](https://travis-ci.org/apertureless/vue-cookie-law)
-[![npm](https://img.shields.io/npm/v/vue-cookie-law.svg)](https://www.npmjs.com/package/vue-cookie-law)
+[![Build Status](https://travis-ci.org/lmm-git/vue-bootstrap-cookie-law.svg?branch=master)](https://travis-ci.org/lmm-git/vue-bootstrap-cookie-law)
+[![npm](https://img.shields.io/npm/v/vue-bootstrap-cookie-law.svg)](https://www.npmjs.com/package/vue-bootstrap-cookie-law)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/vue-cookie-law/blob/master/LICENSE)
 
-EU Cookie Law Plugin for Vue.js
-
-📺 [Demo](https://apertureless.github.io/vue-cookie-law/)
+EU Cookie Law Plugin for Vue.js - Originally written by Jakub Juszczak <jakub@posteo.de>
 
 ## 🔧  Install
-`yarn add vue-cookie-law`
+`yarn add vue-bootstrap-cookie-law`
 
 ## 👈 Usage
 
@@ -17,12 +15,12 @@ EU Cookie Law Plugin for Vue.js
 
 <template>
   <footer>
-    <cookie-law theme="dark-lime"></cookie-law>
+    <cookie-law theme="white-transparent"></cookie-law>
   </footer>
 </template>
 
 <script>
-  import CookieLaw from 'vue-cookie-law'
+  import CookieLaw from 'vue-bootstrap-cookie-law'
   export default {
     components: { CookieLaw }
   }
@@ -36,7 +34,7 @@ You can also pass in the message into a named slot. This way you can for example
 ```html
 <cookie-law>
   <div slot="message">
-    Here is my message for more info <router-link to="legal-notes">Click here</router-link>
+    <p>Here is my message for more info <router-link to="legal-notes">Click here</router-link></p>
   </div>
 </cookie-law>
 ```
@@ -69,30 +67,11 @@ The default button will emit an `accept` event you can listen on if the user cli
 ### Custom Themes
 You can easy create your own themes. The classes that need to be styled are:
 
-- `.Cookie` for the container
-- `.Cookie__content` for the content with message
-- `.Cookie__button` for the button
-
-If you create your own theme, postfix the class.
-
-```css
-.Cookie--mytheme {....}
-.Cookie--mytheme .Cookie__button {....}
-.Cookie--mytheme div.Cookie__button:hover {....}
-```
+- `.cookie` for the container
+- `.cookie-content` for the content with message
+- `.cookie-button` for the button
 
 And then pass your theme name to the component.
-
-## :scroll: Changelog
-Details changes for each release are documented in the [CHANGELOG.md](https://github.com/apertureless/vue-cookie-law/blob/develop/CHANGELOG.md).
-
-
-## :exclamation: Issues
-Please make sure to read the [Issue Reporting Checklist](https://github.com/apertureless/vue-cookie-law/blob/develop/CONTRIBUTING.md#issue-reporting-guidelines) before opening an issue. Issues not conforming to the guidelines may be closed immediately.
-
-
-## :muscle: Contribution
-Please make sure to read the [Contributing Guide](https://github.com/apertureless/vue-cookie-law/blob/develop/CONTRIBUTING.md) and [Code of Conduct](code-of-conduct.md) before making a pull request.
 
 ## :copyright: License
 
