@@ -5,8 +5,8 @@
         <slot name="message"><p>{{ message }}</p></slot>
       </div>
       <b-button-group class="cookie-buttons">
-        <b-button v-if="informationButtonLink" :variant="informationButtonVariant" :to="informationButtonLink">{{ informationButtonText }}</b-button>
-        <b-button :variant="closeButtonVariant" @click="accept">{{ buttonText }}</b-button>
+        <b-button class="cookie-button" v-if="informationButtonLink" :variant="informationButtonVariant" :to="informationButtonLink">{{ informationButtonText }}</b-button>
+        <b-button class="cookie-button" :variant="closeButtonVariant" @click="accept">{{ buttonText }}</b-button>
       </b-button-group>
     </div>
   </transition>

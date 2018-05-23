@@ -6,7 +6,7 @@ describe('CookieLaw.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(CookieLaw)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.Cookie__content').textContent)
+    expect(vm.$el.querySelector('.cookie-content').textContent)
       .to.equal('This website uses cookies to ensure you get the best experience on our website.')
   })
 
@@ -14,22 +14,16 @@ describe('CookieLaw.vue', () => {
     const Constructor = Vue.extend(CookieLaw)
     const vm = new Constructor().$mount()
 
-    expect(vm.$el.querySelector('.Cookie__button').textContent)
+    expect(vm.$el.querySelector('.cookie-button').textContent)
       .to.equal('Got it!')
 
     expect(localStorage.getItem('cookie:accepted')).to.equal(null)
 
-    vm.$el.querySelector('.Cookie__button').click()
+    vm.$el.querySelector('.cookie-button').click()
 
     expect(localStorage.getItem('cookie:accepted')).to.equal('true')
 
     localStorage.clear()
-  })
-  it('should have an <a> tag with target="_blank" if buttonLinkNewTab prop is true', () => {
-    const Constructor = Vue.extend(CookieLaw)
-    const vm = new Constructor({ propsData: { buttonLink: 'link', buttonLinkNewTab: true } }).$mount()
-    expect(vm.$el.querySelector('.Cookie__buttons > a').getAttribute('target'))
-      .to.equal('_blank')
   })
   // it('should set a cookie when localstorage is not available', () => {
   //   const Constructor = Vue.extend(CookieLaw)
