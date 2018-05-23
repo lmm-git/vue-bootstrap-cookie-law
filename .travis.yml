@@ -1,9 +1,9 @@
 language: node_js
 sudo: false
 node_js:
-  - 9
-  - 8
-  - 6
+- 9
+- 8
+- 6
 notifications:
   email: false
 cache:
@@ -12,7 +12,7 @@ cache:
 deploy:
   provider: npm
   email: leonard@marschke.me
-  api_key:
-    secure: lDJxu+nsEcqj5OykUTkoOQUQgfUnXGqAawiqbUcpmTRUGYdAkRUmDqYHW1v5evTkEsYNnDpFXb5bhJYv21Mg+bL31yGRCSdaPkYL15Gf1yNGMGbjQsm/p1FVoJwONiIjVWs5n5f0DmqdaYA/NPqMH06rgzxlntE/Q+Y0wec2vKDFWi0HBDuvO+N4IttUaniXuob2s8DXDgrGIU+neHFVqg0raQm/b8NpzfxlJXtfEOb8mFBQoSeYDtYfvJwfT1NX2wez7svvEn8YF4sIONY0hoyoF0jivLFVBoEFeTg+cTx9lgZLjcpnNU86RFl/xr39OGHGoW4jmk2nI1sa+PxhEwUNmnZF+PfwJcqNrGle5flBm9BDYnqxBDbhf/5DI8/uA/YefH2PQtNrV1UQVmjvRrKqNgqnkeXrggA4ZHjVIyQrLoA5xjGqHLxRzDXYx4Tk9626I150XOHu9t/rHyu9Hz8G9KFUqaU/TPyJ70kTM+ABt8PF7rCHq3i6LmlO2TEOFyUtemI/Ik5xjPxxIVQgNAN2yR4if0MdpsixKz3Ls5Vmj/n58abaIXmqMwkJjUF84+gfmLXKcs/M8NaYQHOdI3E5O21veV2ENyDSxFMMDrNuvskfqy4SkoobQajG9n8fooKiY0gn1OglcJOugo2QnXibmuNRFDdDG10KZM3nsB4=
   on:
     tags: true
+  api_key:
+    secure: ET4f5cBcddnNBVD2XYoVmk0xAw4lmPa/yLwN4p7p8whIAtz5y8V82GghCs1ZIHm127dxb8cmcKRJXuCXgH2P0GrnDA+jmDrWg7SgtMSMpAnAh3bka/AQIXpwE27nzI9UlzRWzsbhmQ0SaiVRsc6QzBB+1uCHZkdGk5+3ietw4LSdeDlUsCCUU2W+OcS8njEOP5w9f40xade5dF8gfSPvm7FL9UDQkyY+nE1qtu/56XuyRgp7tdJJ20pEXkh8ZQqRjPzS/0eijKlfJ9tHcVvm2GP175RHnBgM2FqFqqmJjenlDxgZM/gd+Taaqshvr+eu1aY8fkF732fYtUq+DCawp51PSMorw6DjKJfI92KAEsV2DFBZOn7VdxaO3OdrsCXtZU+rLZOAH3k8Si2aOeN8j20Szm+Q09j4MIGdilPTiP+Wu8M8WxonOOkSdvukj5vFXcCjsjCrMeafTnRYV4fRGbHL0eUbhW7e2BsSmm7UVOWzUkQ3NioQsReHIXgaKcxrBBpqvPwnx9X5KHaNoI5ofJDHAonFXXrVFFn2DFb9Sa+jjgmMhF5nz73idvlLrCazdSiHy4W8CBetrxmUEJmu640k9uHJ74s64COgM7H9X2UUtExcUFvb234qIgWBt//NsYfHqndNs9+ezfzzGGnyTGXHeIPNECU/TER72o4b0n4=
