@@ -12,10 +12,6 @@ cache:
 after_success:
   - npm run build
 before_deploy:
-  - cd dist
-  - cp ../package.json .
-  - cp ../LICENSE .
-  - cp ../README.md .
   - ls
 deploy:
   provider: npm

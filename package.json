@@ -1,6 +1,6 @@
 {
   "name": "vue-bootstrap-cookie-law",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "🍪 👮 EU Cookie Law Plugin for Vue.js",
   "author": "Leonard Marschke <leonard@marschke.me>",
   "license": "MIT",
@@ -19,10 +19,10 @@
     "Cookie info",
     "Bootstrap"
   ],
-  "main": "dist/vue-cookie-law.js",
-  "unpkg": "dist/vue-cookie-law.js",
-  "module": "dist/vue-cookie-law.js",
-  "jsnext:main": "dist/vue-cookie-law.js",
+  "main": "dist/vue-bootstrap-cookie-law.js",
+  "unpkg": "dist/vue-bootstrap-cookie-law.js",
+  "module": "dist/vue-bootstrap-cookie-law.js",
+  "jsnext:main": "dist/vue-bootstrap-cookie-law.js",
   "files": [
     "dist"
   ],
