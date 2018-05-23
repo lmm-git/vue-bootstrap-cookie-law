@@ -36,7 +36,7 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "prepublish": "npm run purge && npm run lint && npm run build"
+    "prepublish": "npm run purge && npm run build"
   },
   "devDependencies": {
     "@nextindex/next-scss": "^1.2.0",
