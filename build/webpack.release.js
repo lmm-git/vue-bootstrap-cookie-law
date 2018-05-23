@@ -20,7 +20,7 @@ module.exports = {
     entry: './src/components/CookieLaw.vue',
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'vue-cookie-law.js',
+        filename: 'vue-bootstrap-cookie-law.js',
         library: 'CookieLaw',
         libraryTarget: 'umd',
         umdNamedDefine: true
