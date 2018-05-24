@@ -6,7 +6,7 @@
       </div>
       <b-button-group class="cookie-buttons">
         <b-button class="cookie-button" v-if="informationButtonLink" :variant="informationButtonVariant" :to="informationButtonLink">{{ informationButtonText }}</b-button>
-        <b-button class="cookie-button" :variant="closeButtonVariant" @click="accept">{{ buttonText }}</b-button>
+        <b-button class="cookie-button" :variant="closeButtonVariant" @click="accept">{{ closeButtonText }}</b-button>
       </b-button-group>
     </div>
   </transition>
@@ -16,7 +16,7 @@
   import * as Cookie from 'tiny-cookie'
   export default {
     props: {
-      buttonText: {
+      closeButtonText: {
         type: String,
         default: 'Got it!'
       },
