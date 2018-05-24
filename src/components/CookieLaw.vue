@@ -144,6 +144,10 @@
     @include media($sm-up) {
       flex-flow: row;
       display: flex;
+
+      .cookie-buttons {
+        margin-left: 15px;
+      }
     }
 
     @include media($sm-down) {

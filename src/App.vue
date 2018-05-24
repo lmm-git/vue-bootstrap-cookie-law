@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <cookie-law information-button-link="https://marschke.me" close-button-variant="success" theme="gray-transparent">
-      <p slot="message">Write something...</p>
+      <p slot="message">Write something very long long long long long long long long long long long long long long long...</p>
     </cookie-law>
   </div>
 </template>
