@@ -128,8 +128,8 @@
   }
 </script>
 
-<style lang="scss">
-  @import "~@nextindex/next-scss/next-scss.scss";
+<style lang="scss" scoped>
+  @import "~bootstrap/scss/bootstrap";
 
   .cookie {
     position: fixed;
@@ -141,7 +141,7 @@
     align-items: baseline;
     flex-direction: column;
 
-    @include media($sm-up) {
+    @include media-breakpoint-up('sm') {
       flex-flow: row;
       display: flex;
 
@@ -150,7 +150,7 @@
       }
     }
 
-    @include media($sm-down) {
+    @include media-breakpoint-down('sm') {
       text-align: center;
 
       .btn-group {
