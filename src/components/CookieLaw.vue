@@ -1,6 +1,6 @@
 <template>
   <transition appear :name="transitionName">
-    <div class="cookie" :class="[containerPosition, cookieTheme]" v-if="isOpen">
+    <div class="cookie cookie-notice" :class="[containerPosition, cookieTheme]" v-if="isOpen">
       <div class="cookie-content">
         <slot name="message"><p>{{ message }}</p></slot>
       </div>
