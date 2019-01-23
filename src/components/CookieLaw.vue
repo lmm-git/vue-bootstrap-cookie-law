@@ -129,7 +129,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "~bootstrap/scss/bootstrap";
+  @import "../style/bootstrap-component-include";
 
   .cookie {
     position: fixed;
