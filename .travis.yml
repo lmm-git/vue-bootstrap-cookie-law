@@ -1,18 +1,18 @@
 language: node_js
 sudo: false
 node_js:
-  - 9
-  - 8
-  - 6
+- 9
+- 8
+- 6
 notifications:
   email: false
 cache:
   directories:
   - "$HOME/.npm"
 after_success:
-  - npm run build
+- npm run build
 before_deploy:
-  - ls
+- ls
 deploy:
   provider: npm
   skip_cleanup: true
@@ -20,4 +20,4 @@ deploy:
   on:
     tags: true
   api_key:
-    secure: ET4f5cBcddnNBVD2XYoVmk0xAw4lmPa/yLwN4p7p8whIAtz5y8V82GghCs1ZIHm127dxb8cmcKRJXuCXgH2P0GrnDA+jmDrWg7SgtMSMpAnAh3bka/AQIXpwE27nzI9UlzRWzsbhmQ0SaiVRsc6QzBB+1uCHZkdGk5+3ietw4LSdeDlUsCCUU2W+OcS8njEOP5w9f40xade5dF8gfSPvm7FL9UDQkyY+nE1qtu/56XuyRgp7tdJJ20pEXkh8ZQqRjPzS/0eijKlfJ9tHcVvm2GP175RHnBgM2FqFqqmJjenlDxgZM/gd+Taaqshvr+eu1aY8fkF732fYtUq+DCawp51PSMorw6DjKJfI92KAEsV2DFBZOn7VdxaO3OdrsCXtZU+rLZOAH3k8Si2aOeN8j20Szm+Q09j4MIGdilPTiP+Wu8M8WxonOOkSdvukj5vFXcCjsjCrMeafTnRYV4fRGbHL0eUbhW7e2BsSmm7UVOWzUkQ3NioQsReHIXgaKcxrBBpqvPwnx9X5KHaNoI5ofJDHAonFXXrVFFn2DFb9Sa+jjgmMhF5nz73idvlLrCazdSiHy4W8CBetrxmUEJmu640k9uHJ74s64COgM7H9X2UUtExcUFvb234qIgWBt//NsYfHqndNs9+ezfzzGGnyTGXHeIPNECU/TER72o4b0n4=
+    secure: nNQHRpEmd5HF0wlpJOYS7kFq/u5/AAQFSJ37aW7i9wT12GLRLoTfSqVQxWocSguJU7Gl7kcQirxmXFrGIzM+b+JMpQZeI+p0oXG/zf1R8KTUr92zreGMyQ1oMbsfdnLDRW5ZBcp1tQZSc6L7MVjdI2urEmfGKIlqKdbLUyH+5gpZm0/CfwdKRoUeEqmSPhiqCvCvF/Xx439+T/fRsgYWGLk/rudcyMme3JLrhQgR/+diYMBEFPRnT7xL7v3sMEQC9Pyo17urzzBSjKsmO12fAPl5WrIz5mjW8tFZ6u8vcgF9eONYwsbd1fiUI7mpVkCrcLI0vBoRqgOEOSNi2WQe7SJScjPRWHlBE/URCLu1YFXfEJsRWlOtMBht6MZreZn9w0WV3gJ4DFrpxy9+hRFYSdy86qpb0piezkazf/nqAxPZ9yR5hjJz1Gt1415qKXfdqKpXxP2rlnXoQms6jNilxTUTC3aXlR18C8gi3PZ6e7Dz8hFaCAQiuWO8i41M9e5aA8iajq48PxWTkEssZ5rgCN21lzdKZerV9ECiWTeIxl4M4uXF++M85vUyHRMWWLalEh1VjGtdT65WqWnhxiqxacIjLhrc3gSccMHHz6Kq+XLS2sZs6GEVfpTDqxKOOshF+nb6F5HhSQl1CQVG8ksGu2IURhZQwRi/bFcQzaPAw3Q=
